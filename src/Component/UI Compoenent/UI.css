@@ -1,0 +1,34 @@
+.check-mark {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: var(--dark-grayish-blue) solid 1px;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-mark img {
+  width: 60%;
+  height: 50%;
+  display: none;
+}
+
+.check-mark.checked img {
+  display: inline-block;
+}
+
+.check-mark.checked {
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.remove {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  margin-left: auto;
+}
+
+.remove img {
+  width: 100%;
+  height: 100%;
+}
