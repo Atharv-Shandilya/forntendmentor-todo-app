@@ -1,17 +1,21 @@
 import "./UI.css";
 import check from "../../assets/icon-check.svg";
-import { useState } from "react";
-function CheckMark() {
-  const [checked, setChecked] = useState(false);
-  function clickHandler() {
-    console.log(checked);
-    if (checked) setChecked(false);
-    else setChecked(true);
+
+function CheckMark(props) {
+  function checkHandler() {
+    if (props.working) {
+      props.setTaskList((prev) => {
+        let temp = [...prev];
+        temp[props.index].check = !props.check;
+        return temp;
+      });
+    }
   }
   return (
     <div
-      className={`check-mark flex ${checked ? "checked" : ""}`}
-      onClick={clickHandler}
+      className={`check-mark flex 
+       ${props.check ? "checked" : ""}`}
+      onClick={checkHandler}
     >
       <img src={check} alt="" />
     </div>
