@@ -2,7 +2,7 @@ import TaskCreate from "./TaskCreate";
 import TaskDisplay from "./TaskDisplay";
 import { useState } from "react";
 
-import "./tasks.css";
+import "./Tasks.css";
 import TaskSort from "./TaskSort";
 
 function Tasks(props) {
